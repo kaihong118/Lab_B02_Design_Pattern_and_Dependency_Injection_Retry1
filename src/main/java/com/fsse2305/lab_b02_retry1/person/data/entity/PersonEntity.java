@@ -70,4 +70,20 @@ public class PersonEntity {
     public void setHkid(String hkid) {
         this.hkid = hkid;
     }
+
+    public List<CourseEntity> getTeacherCourse() {
+        return teacherCourse;
+    }
+
+    public void setTeacherCourse(List<CourseEntity> teacherCourse) {
+        this.teacherCourse = teacherCourse;
+    }
+
+    public List<CourseEntity> getCourseStudentJoined() {
+        return courseStudentJoined;
+    }
+
+    public void setCourseStudentJoined(List<CourseEntity> courseStudentJoined) {
+        this.courseStudentJoined = courseStudentJoined;
+    }
 }

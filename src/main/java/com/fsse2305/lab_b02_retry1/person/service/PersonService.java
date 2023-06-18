@@ -17,5 +17,7 @@ public interface PersonService {
 
     List<PersonDetailData> findByLastName(String lastName);
 
+    PersonDetailData getTeacherCourse(String hkid);
+
     PersonEntity findByHkid(String hkid);
 }

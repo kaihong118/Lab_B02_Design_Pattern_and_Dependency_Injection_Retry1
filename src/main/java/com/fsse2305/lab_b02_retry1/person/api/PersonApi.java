@@ -55,4 +55,12 @@ public class PersonApi {
         }
         return personDetailResponseDtoList;
     }
+
+    @GetMapping("/teacher-course/{hkid_number}")
+    public PersonDetailResponseDto getTeacherCourse(@PathVariable(value = "hkid_number") String hkid) {
+        PersonDetailData personDetailData = personService.getTeacherCourse(hkid);
+        PersonDetailResponseDto personDetailResponseDto = new PersonDetailResponseDto(personDetailData);
+        personDetailResponseDto.setTeacherCourse(personDetailData.getTeacherCourse());
+        return personDetailResponseDto;
+    }
 }

@@ -94,6 +94,14 @@ public class PersonServiceImplement implements PersonService{
     }
 
     @Override
+    public PersonDetailData getTeacherCourse(String hkid) {
+        PersonEntity teacher = findByHkid(hkid);
+        PersonDetailData personDetailData = new PersonDetailData(teacher);
+        personDetailData.setTeacherCourse(teacher.getTeacherCourse());
+        return personDetailData;
+    }
+
+    @Override
     public PersonEntity findByHkid(String hkid) {
         PersonEntity personEntity = personRepository.findByHkid(hkid);
         if(personEntity == null) {
